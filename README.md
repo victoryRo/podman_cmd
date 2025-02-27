@@ -4,16 +4,16 @@
 
 ## First container
 
-Corre un contenedor y abre una conexion interactiva con proceso.
+corre un contenedor y abre una conexion interactiva con proceso.
 
-Runs a container and opens an interactive connection with the process.
+runs a container and opens an interactive connection with the process.
 ```sh
 podman run -it --name myfedora fedora /bin/sh
 ```
 
-Con esta secuencia, volveremos a nuestro indicador de shell mientras el contenedor sigue ejecutándose.
+con esta secuencia, volveremos a nuestro indicador de shell mientras el contenedor sigue ejecutándose.
 
-With this sequence, we will return to our shell prompt while the container continues to run.
+with this sequence, we will return to our shell prompt while the container continues to run.
 ```sh
 CTRL + p  y CTRL + q
 ```
@@ -27,7 +27,7 @@ podman attach 685a339917e7
 
 podemos ver el mapeo de puertos del contenedor por su id.
 
-We can see the port mapping of the container by its id.
+we can see the port mapping of the container by its id.
 ```sh
 podman port 685a339917e7
 ```
@@ -36,31 +36,31 @@ podman port 685a339917e7
 ## Gestión imágenes de contenedores
 ### Managing container images
 
-Lista solo imagenes oficiales de nginx.
+lista solo imagenes oficiales de nginx.
 
-List only official nginx images.
+list only official nginx images.
 ```sh
 podman search nginx --filter=is-official
 ```
 
-Lista las imagenes oficiales de nginx en formato tabla.
+lista las imagenes oficiales de nginx en formato tabla.
 
-Lists official nginx images in table format.
+lists official nginx images in table format.
 ```sh
 podman search nginx --filter=is-official \
 --format "table {{.Index}} {{.Name}} {{.Description}} {{.Official}}"
 ```
 
-Lista todas la imagenes de postgres con sus etiquetas.
+lista todas la imagenes de postgres con sus etiquetas.
 
-List all postgres images with their tags.
+list all postgres images with their tags.
 ```sh
 podman search postgres --list-tags
 ```
 
-Extraemos una imagen oficial con una version especifica.
+extraemos una imagen oficial con una version especifica.
 
-We extract an official image with a specific version.
+we extract an official image with a specific version.
 ```sh
 podman pull docker.io/library/alpine:2.7
 ```

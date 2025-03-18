@@ -86,6 +86,7 @@ deletes all images that are not in use
 podman image prune -af
 ```
 
+---
 ## Operaciones con contenedores en funcionamiento
 ### Operations with running containers
 
